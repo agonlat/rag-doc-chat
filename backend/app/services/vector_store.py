@@ -1,7 +1,7 @@
 import faiss
 import numpy as np
 import pickle
-from patlib import Path
+from pathlib import Path
 from sentence_transformers import SentenceTransformer
 from app.core.config import EMBEDDING_MODEL, VECTORSTORE_DIR, TOP_K
 
@@ -25,3 +25,5 @@ def load_store() -> tuple[faiss.Idex, list[dict]]:
     index = faiss.IndexFlatIP(DIMENSION)
     return index, []
 
+def add_chunks(chunks: list[dict]):
+    pass
